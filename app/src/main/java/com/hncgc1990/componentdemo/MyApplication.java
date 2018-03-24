@@ -12,6 +12,7 @@ public class MyApplication extends Application {
     @Override
     public void onCreate() {
         super.onCreate();
+        //注册uirouter
         UIRouter.getInstance().registerUI("app");
 
     }
