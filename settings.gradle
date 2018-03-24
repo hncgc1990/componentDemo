@@ -1,0 +1,2 @@
+include ':app', ':componentservice', ':component_a'
+//,'componentlib','router-annotation'

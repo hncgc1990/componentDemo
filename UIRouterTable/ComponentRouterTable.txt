@@ -1,0 +1,11 @@
+auto generated, do not change !!!! 
+
+HOST : component
+
+需要传入数据
+/data
+data:String
+
+组件A
+/main
+

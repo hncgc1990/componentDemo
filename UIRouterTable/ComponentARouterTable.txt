@@ -1,0 +1,7 @@
+auto generated, do not change !!!! 
+
+HOST : componentA
+
+组件A
+/main
+
