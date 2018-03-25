@@ -17,7 +17,14 @@
         android:id="@+id/btn_two"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="调用组件A中带数据"
+        android:text="调用组件A中带数据(Bundle方式)"
+        />
+
+    <Button
+        android:id="@+id/btn_three"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="调用组件A中带数据(uri方式)"
         />
 
 

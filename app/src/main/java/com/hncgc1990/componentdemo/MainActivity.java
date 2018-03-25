@@ -17,6 +17,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         setContentView(R.layout.activity_main);
         findViewById(R.id.btn_one).setOnClickListener(this);
         findViewById(R.id.btn_two).setOnClickListener(this);
+        findViewById(R.id.btn_three).setOnClickListener(this);
 
     }
 
@@ -26,8 +27,11 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             case R.id.btn_one://跳转到组件A中的无数据activity
                 goToActivity();
                 break;
-            case R.id.btn_two://跳转到组件A中的有数据activity
+            case R.id.btn_two://跳转到组件A中的有数据activity(bundle方式)
                 goToActivityWithData();
+                break;
+            case R.id.btn_three://跳转到组件A中的有数据activity(uri方式)
+                goToActivityWithDataInUri();
                 break;
                 default:
                     break;
@@ -36,11 +40,8 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
 
 
-    private void goToActivity() {
 
-//        boolean b1 = UIRouter.getInstance().verifyUri(Uri.parse("DDComp://app/home"));
-//        boolean b2 = UIRouter.getInstance().verifyUri(Uri.parse("DDComp://component/main"));
-//        Log.d("chen",b+"..."+b1+"____"+b2);
+    private void goToActivity() {
 
 
         UIRouter.getInstance().openUri(this, "hncgc1990://component/main", null);
@@ -53,6 +54,12 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         bundle.putString("data","Hello Data");
         UIRouter.getInstance().openUri(this,"hncgc1990://component/data",bundle);
 
+    }
+
+
+    private void goToActivityWithDataInUri() {
+        String data="Hello Data";
+        UIRouter.getInstance().openUri(this, "hncgc1990://component/data?data="+data, null);
     }
 
 }
